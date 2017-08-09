@@ -29,60 +29,28 @@
       </div>
 
       <div class="team-members row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="single-member">
-            <div class="best-volunteer">
-              <div class="voluntee-image">
-                <a href="#" title=""><img src="{{ .Site.BaseURL }}img/best-volunte-1.jpg" alt=""></a>
-              </div>
-              <ul class="socials">
-                <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        {{ range (where .Site.Pages "Section" "volunter") }}
+          {{ if eq .Title "Volunters" }}
 
-              </ul>
-              <span><a href="#" title="">Cheif Director</a></span>
-              <h2><a href="#" title="">Jonathan Greg</a></h2>
-              <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="single-member">
-            <div class="best-volunteer">
-              <div class="voluntee-image">
-                <a href="#" title=""><img src="{{ .Site.BaseURL }}img/best-volunte-2.jpg" alt=""></a>
+          {{ else }}
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="single-member" style="">
+                <div class="best-volunteer" style="padding:20px">
+                  <div class="voluntee-image">
+                    <a href="{{ .Permalink }}" title="{{ .Params.personname }}"><img src="{{ .Params.image }}" alt="{{ .Params.personname }}"></a>
+                  </div>
+                  <ul class="socials">
+                        <li><a href="" target="_blank" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+                  <span><a href="{{ .Permalink }}" title="{{ .Params.postname }}">{{ .Params.postname }}</a></span>
+                  <h2><a href="{{ .Permalink }}" title="{{ .Params.personname }}">{{ .Params.personname }}</a></h2>
+                  <p>{{ .Description }}</p>
+                </div>
               </div>
-              <ul class="socials">
-                <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
-              </ul>
-              <span><a href="#" title="">Cheif Volunteer</a></span>
-              <h2><a href="#" title="">Jennifier kalvin</a></h2>
-              <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 hidden-sm">
-          <div class="single-member">
-            <div class="best-volunteer">
-              <div class="voluntee-image">
-                <a href="#" title=""><img src="{{ .Site.BaseURL }}img/best-volunte-3.jpg" alt=""></a>
-              </div>
-              <ul class="socials">
-                <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
-              </ul>
-              <span><a href="#" title="">Cheif Director</a></span>
-              <h2><a href="#" title="">Mikel Willson</a></h2>
-              <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
-            </div>
-          </div>
-        </div>
+          {{end}}
+        {{ end }}
       </div>
     </div>
   </div>

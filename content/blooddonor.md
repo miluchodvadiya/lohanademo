@@ -1,4 +1,4 @@
 +++
-title = "Gallery"
-id = "gallery"
+title = "Blood Donor"
+id = "blooddonor"
 +++

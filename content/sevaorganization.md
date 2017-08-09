@@ -1,4 +1,4 @@
 +++
-title = "Gallery"
-id = "gallery"
+title = "Seva Organization"
+id = "sevaorganization"
 +++

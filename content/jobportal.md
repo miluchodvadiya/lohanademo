@@ -1,4 +1,4 @@
 +++
-title = "Gallery"
-id = "gallery"
+title = "Job Portal"
+id = "jobportal"
 +++
