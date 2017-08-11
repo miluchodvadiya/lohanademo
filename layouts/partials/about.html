@@ -37,7 +37,7 @@
               <div class="single-member" style="">
                 <div class="best-volunteer" style="padding:20px">
                   <div class="voluntee-image">
-                    <a href="{{ .Permalink }}" title="{{ .Params.personname }}"><img src="{{ .Params.image }}" alt="{{ .Params.personname }}"></a>
+                    <a href="{{ .Permalink }}" title="{{ .Params.personname }}"><img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Params.personname }}"></a>
                   </div>
                   <ul class="socials">
                         <li><a href="" target="_blank" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
